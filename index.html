@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COFFEE SOFT · Presentación del proyecto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ BARRA DE PROGRESO / NAVEGACIÓN ============ -->
+<nav class="deck-nav" aria-label="Navegación de la presentación">
+  <div class="deck-nav__counter"><span id="slideCurrent">01</span> / <span id="slideTotal">17</span></div>
+  <div class="deck-nav__brand">
+    <img class="deck-nav__logo" src="img/logo-coffeesoft.png" alt="Logotipo de COFFEE SOFT">
+    <span>COFFEE SOFT</span>
+  </div>
+</nav>
+
+<button class="edge-btn edge-btn--prev" id="btnPrev" aria-label="Diapositiva anterior">&#8592;</button>
+<button class="edge-btn edge-btn--next" id="btnNext" aria-label="Siguiente diapositiva">&#8594;</button>
+
+<div class="dots" id="dots" aria-hidden="true"></div>
+
+<!-- ============ DECK ============ -->
+<main class="deck" id="deck">
+
+  <!-- 1. PORTADA -->
+  <section class="slide slide--cover" data-title="Portada">
+    <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="cover">
+      <img class="cover__logo" src="img/logo-coffeesoft.png" alt="Logotipo de COFFEE SOFT" data-lightbox>
+      <h1 class="cover__title">COFFEE SOFT</h1>
+      <p class="cover__subtitle">El aroma del café, la calma de una buena gestión</p>
+      <div class="cover__meta">
+        <div class="cover__meta-item">
+          <span class="eyebrow">Presentado por</span>
+          <span class="cover__meta-value">Brigith Daniela Castellanos Martinez</span>
+        </div>
+      </div>
+    </div>
+    <div class="ring-decor ring-decor--1" aria-hidden="true"></div>
+  </section>
+
+  <!-- 2. INTRODUCCIÓN -->
+  <section class="slide" data-title="Introducción">
+    <p class="eyebrow">Introducción</p>
+    <h2 class="slide__hook">¿Cuántas tazas de café —y cuántas ventas— se pierden por llevar un negocio a puño y letra?</h2>
+    <div class="intro-grid">
+      <p class="intro-lead">
+        Detrás de cada bebida que se sirve hay un pedido que anotar, un inventario que cuadrar, un cliente que atender bien
+        y un planeta al que cuidar. En la mayoría de cafeterías, todo eso todavía se sostiene con cuadernos, hojas sueltas
+        y memoria. Un solo error de inventario, un pedido mal anotado o un dato que nunca se registró pueden costar tiempo,
+        dinero y clientes.
+      </p>
+      <div class="cta-box">
+        <span class="bean-icon bean-icon--sm" aria-hidden="true"></span>
+        <p>Hoy los invito a descubrir cómo la tecnología puede transformar un negocio de café en una operación
+        <strong>inteligente, ordenada y sostenible</strong> — sin perder la calidez que lo hace un buen lugar para tomar café.
+        Esto es <strong>COFFEE SOFT</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SITUACIÓN PROBLEMA -->
+  <section class="slide" data-title="Situación problema">
+    <p class="eyebrow">Situación problema</p>
+    <h2 class="slide__title">Un negocio que crece más rápido que su forma de administrarse</h2>
+    <div class="problem-grid">
+      <ul class="bean-list">
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">La gestión del <strong>inventario, los pedidos y las ventas</strong> todavía se realiza de forma manual o en herramientas separadas, lo que impide tener la información del negocio centralizada y actualizada en un solo lugar.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">No existe un control claro de <strong>roles y accesos</strong>, por lo que el administrador, el cajero o mesero y el cocinero comparten procesos y responsabilidades sin ninguna trazabilidad sobre quién hizo cada acción.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">La toma de decisiones del negocio se apoya más en la intuición que en datos reales, porque no existen <strong>reportes confiables y oportunos</strong> sobre ventas, inventario y demás indicadores clave de la operación.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">El establecimiento no cuenta con ninguna herramienta para medir ni registrar sus <strong>acciones de sostenibilidad y reciclaje</strong>, lo que le impide demostrar de forma concreta su compromiso ambiental ante sus clientes.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">Tampoco existe un mecanismo tecnológico que permita analizar la <strong>calidad de la atención al cliente</strong> durante el servicio, dejando esa evaluación a la percepción subjetiva del personal.</span></li>
+      </ul>
+      <div class="problem-card">
+        <span class="eyebrow">Consecuencia</span>
+        <p>Procesos lentos, pérdida de información, decisiones basadas en intuición y un negocio que no puede escalar
+        ni demostrar su compromiso ambiental de forma medible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PREGUNTA PROBLEMA -->
+  <section class="slide slide--center" data-title="Pregunta problema">
+    <p class="eyebrow">Pregunta problema</p>
+    <blockquote class="big-question">
+      ¿Cómo optimizar la gestión de usuarios, productos, inventario, pedidos y ventas de una cafetería mediante una
+      plataforma web integral que además promueva prácticas de sostenibilidad y mejore la atención al cliente?
+    </blockquote>
+  </section>
+
+  <!-- 5. OBJETIVO GENERAL -->
+  <section class="slide" data-title="Objetivo general">
+    <p class="eyebrow">Objetivo general</p>
+    <h2 class="slide__title">Lo que buscamos lograr</h2>
+    <div class="objective-card">
+      <img src="img/logo-coffeesoft.png" alt="Logo COFFEE SOFT" class="objective-icon">
+      <p>Desarrollar un sistema web que optimice la gestión interna de un establecimiento
+      dedicado a la preparación y comercialización de café, integrando en una sola plataforma la administración de
+      usuarios, productos, inventario, pedidos y ventas, así como el registro de actividades de sostenibilidad y un
+      módulo de reconocimiento facial que apoye el análisis de la atención brindada durante el servicio.</p>
+    </div>
+  </section>
+
+  <!-- 6. OBJETIVOS ESPECÍFICOS -->
+  <section class="slide" data-title="Objetivos específicos">
+    <p class="eyebrow">Objetivos específicos</p>
+    <h2 class="slide__title">Cómo lo vamos a lograr</h2>
+    <ol class="bean-list bean-list--wide">
+      <li><img src="img/logo-coffeesoft.png" alt="" class="bean-logo" aria-hidden="true"><span class="bean-text"><strong>Analizar</strong> los procesos de gestión del establecimiento para identificar los requisitos funcionales y operativos que debe cumplir el sistema.</span></li>
+      <li><img src="img/logo-coffeesoft.png" alt="" class="bean-logo" aria-hidden="true"><span class="bean-text"><strong>Desarrollar</strong> un sistema integral para la administración de usuarios, productos, inventario, pedidos y ventas, optimizando la gestión del establecimiento.</span></li>
+      <li><img src="img/logo-coffeesoft.png" alt="" class="bean-logo" aria-hidden="true"><span class="bean-text"><strong>Implementar</strong> herramientas de apoyo para la toma de decisiones y la mejora del servicio, mediante reportes, indicadores y reconocimiento facial.</span></li>
+      <li><img src="img/logo-coffeesoft.png" alt="" class="bean-logo" aria-hidden="true"><span class="bean-text"><strong>Garantizar</strong> la seguridad, trazabilidad y sostenibilidad del sistema, incorporando mecanismos de auditoría y un módulo para el registro y seguimiento de acciones de reciclaje y sostenibilidad.</span></li>
+    </ol>
+  </section>
+
+  <!-- 7. DIAGRAMA MODELO CONCEPTUAL -->
+  <section class="slide slide--diagram" data-title="Modelo conceptual">
+    <p class="eyebrow">Diagramas del sistema · 1 / 6</p>
+    <h2 class="slide__title">Modelo conceptual</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/diagrama-conceptual.png" alt="Modelo conceptual de COFFEE SOFT con entidades Usuario, Rol, Producto, Categoría, Inventario, Pedido, Venta, DetallePedido, Sostenibilidad y Reconocimiento Facial" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>Representa las entidades del negocio y sus relaciones de alto nivel, sin detalles técnicos de implementación.</p>
+        <div class="chip-row">
+          <span class="chip">Usuario</span><span class="chip">Rol</span><span class="chip">Producto</span>
+          <span class="chip">Categoría</span><span class="chip">Inventario</span><span class="chip">Pedido</span>
+          <span class="chip">DetallePedido</span><span class="chip">Venta</span><span class="chip">Sostenibilidad</span>
+          <span class="chip">Reconocimiento Facial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. DIAGRAMA MODELO LÓGICO -->
+  <section class="slide slide--diagram" data-title="Modelo lógico">
+    <p class="eyebrow">Diagramas del sistema · 2 / 6</p>
+    <h2 class="slide__title">Modelo lógico (MySQL)</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/diagrama-logico.png" alt="Modelo lógico en MySQL con tablas, tipos de datos, llaves primarias y foráneas" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>Traduce el modelo conceptual a tablas relacionales listas para implementar en MySQL, definiendo tipos de
+        datos, llaves primarias (PK) y llaves foráneas (FK) que garantizan la integridad referencial.</p>
+        <div class="chip-row">
+          <span class="chip">10 tablas</span><span class="chip">Claves primarias</span><span class="chip">Claves foráneas</span><span class="chip">Índices</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. DIAGRAMA DE CLASES -->
+  <section class="slide slide--diagram" data-title="Diagrama de clases">
+    <p class="eyebrow">Diagramas del sistema · 3 / 6</p>
+    <h2 class="slide__title">Diagrama de clases</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/diagrama-clases.png" alt="Diagrama de clases UML con atributos, métodos y relaciones entre las clases del sistema" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>Modela las clases del sistema orientadas a objetos: atributos, métodos y relaciones de asociación,
+        composición y dependencia que guiarán la implementación en Django.</p>
+        <div class="chip-row">
+          <span class="chip">Asociación</span><span class="chip">Composición</span><span class="chip">Dependencia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. DIAGRAMA DE CASOS DE USO -->
+  <section class="slide slide--diagram" data-title="Diagrama de casos de uso">
+    <p class="eyebrow">Diagramas del sistema · 4 / 6</p>
+    <h2 class="slide__title">Diagrama de casos de uso</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/diagrama-casos-uso.png" alt="Diagrama de casos de uso con los actores Administrador, Mesero o Cajero y Cocinero, y las acciones que cada uno puede realizar en el sistema" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>Muestra qué puede hacer cada persona dentro de COFFEE SOFT según su rol: el <strong>administrador</strong>
+        gestiona usuarios, roles, productos, inventario, sostenibilidad y reportes; el <strong>mesero o cajero</strong>
+        registra pedidos, cobra las ventas y consulta el inventario; y el <strong>cocinero</strong> revisa los
+        pedidos y actualiza su estado de preparación en cocina.</p>
+        <div class="chip-row">
+          <span class="chip">Administrador</span><span class="chip">Mesero / Cajero</span><span class="chip">Cocinero</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. DIAGRAMA MER -->
+  <section class="slide slide--diagram" data-title="Modelo entidad–relación">
+    <p class="eyebrow">Diagramas del sistema · 5 / 6</p>
+    <h2 class="slide__title">Modelo entidad–relación (MER)</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/diagrama-mer.png" alt="Modelo entidad relación con entidades, atributos, claves primarias y cardinalidades" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>Un usuario tiene un rol y puede realizar muchos pedidos; cada pedido genera una venta y contiene uno o
+        varios productos. Cada producto pertenece a una categoría y tiene su propio inventario. El usuario registra
+        actividades de sostenibilidad y utiliza el reconocimiento facial como método de autenticación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11.1 MODELO FÍSICO -->
+  <section class="slide slide--diagram" data-title="Modelo físico">
+    <p class="eyebrow">Diagramas del sistema · 6 / 6</p>
+    <h2 class="slide__title">Modelo físico (script SQL)</h2>
+    <div class="diagram-layout">
+      <figure class="diagram-figure">
+        <img src="img/modelo-fisico.png" alt="Script SQL de creación de la base de datos con todas las tablas, llaves primarias y foráneas de COFFEE SOFT" data-lightbox>
+      </figure>
+      <div class="diagram-notes">
+        <p>El script SQL traduce el modelo entidad–relación en la base de datos <strong>coffee_soft</strong>, con una
+        tabla por cada entidad (rol, usuario, categoría, producto, inventario, pedido, detalle_pedido, venta,
+        sostenibilidad, reconocimiento_facial y bitácora). Cada llave foránea garantiza la integridad referencial
+        definida en el MER, y campos como estado, fecha_registro y bitácora permiten trazabilidad completa de la
+        información.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. ARQUITECTURA -->
+  <section class="slide slide--diagram" data-title="Arquitectura del sistema">
+    <p class="eyebrow">Arquitectura</p>
+    <h2 class="slide__title slide__title--hero">Arquitectura del sistema</h2>
+    <div class="diagram-layout diagram-layout--wide">
+      <figure class="diagram-figure">
+        <img src="img/arquitectura-sistema.png" alt="Arquitectura cliente servidor de tres capas: cliente, servidor de aplicaciones Django y base de datos MySQL" data-lightbox>
+      </figure>
+      <div class="diagram-notes diagram-notes--scroll">
+        <p>COFFEE SOFT implementa una <strong>arquitectura cliente–servidor de tres capas</strong>, diseñada para
+        garantizar escalabilidad, seguridad y facilidad de mantenimiento.</p>
+        <ul class="layer-list">
+          <li><strong>Capa de presentación (cliente).</strong> Interfaz con la que interactúan los usuarios mediante un navegador web, desarrollada con HTML5, CSS3 y JavaScript, ofreciendo una experiencia intuitiva y responsive.</li>
+          <li><strong>Capa de lógica de negocio (servidor).</strong> Implementada con Python y Django: procesa las solicitudes, administra la autenticación, aplica las reglas de negocio y ejecuta operaciones de productos, inventario, pedidos, ventas y sostenibilidad. Integra además el módulo de reconocimiento facial con OpenCV.</li>
+          <li><strong>Capa de datos (base de datos).</strong> MySQL almacena toda la información: Rol, Usuario, Categoría, Producto, Inventario, Pedido, DetallePedido, Venta, Sostenibilidad y Reconocimiento Facial.</li>
+        </ul>
+        <p class="flow-title">Flujo de funcionamiento</p>
+        <ol class="flow-list">
+          <li>El usuario realiza una acción desde la interfaz web.</li>
+          <li>La solicitud se envía mediante HTTPS al servidor.</li>
+          <li>Django procesa la petición aplicando la lógica de negocio.</li>
+          <li>Si es necesario, consulta o actualiza la información en MySQL.</li>
+          <li>El servidor devuelve la respuesta al cliente para mostrarla al usuario.</li>
+        </ol>
+        <p class="flow-title">Beneficios</p>
+        <div class="chip-row">
+          <span class="chip">Separación de responsabilidades</span>
+          <span class="chip">Mayor seguridad</span>
+          <span class="chip">Escalabilidad</span>
+          <span class="chip">Fácil mantenimiento</span>
+          <span class="chip">Mejor rendimiento</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. PATRONES -->
+  <section class="slide" data-title="Patrones de diseño">
+    <p class="eyebrow">Patrones de diseño</p>
+    <h2 class="slide__title">Patrones aplicados en COFFEE SOFT</h2>
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Arquitectónico</span>
+        <h3>Cliente–Servidor</h3>
+        <p>Separa la interfaz de usuario (cliente web) de la lógica y los datos (servidor Django + MySQL), permitiendo escalar cada capa de forma independiente.</p>
+      </div>
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Framework</span>
+        <h3>MVT (Model–View–Template)</h3>
+        <p>Patrón nativo de Django: el <em>Modelo</em> define los datos, la <em>Vista</em> contiene la lógica y el <em>Template</em> genera el HTML mostrado al usuario.</p>
+      </div>
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Acceso a datos</span>
+        <h3>ORM / Active Record</h3>
+        <p>El ORM de Django traduce clases Python a tablas de MySQL, evitando SQL manual y reduciendo errores de integridad.</p>
+      </div>
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Comunicación</span>
+        <h3>API REST</h3>
+        <p>Expone servicios RESTful para que el cliente web y la futura app móvil (Flutter) consuman la misma lógica de negocio.</p>
+      </div>
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Seguridad</span>
+        <h3>Middleware de autenticación</h3>
+        <p>Intercepta cada solicitud para validar sesión, rol y permisos antes de llegar a la lógica de negocio.</p>
+      </div>
+      <div class="pattern-card">
+        <span class="pattern-card__tag">Comportamiento</span>
+        <h3>Observer (señales)</h3>
+        <p>Las señales de Django notifican eventos —como una venta registrada— para actualizar inventario y auditoría automáticamente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. ESTÁNDARES -->
+  <section class="slide" data-title="Estándares">
+    <p class="eyebrow">Estándares</p>
+    <h2 class="slide__title">Estándares que guían el proyecto</h2>
+    <div class="standard-grid">
+      <div class="standard-card">
+        <h3>IEEE 830</h3>
+        <p>Norma utilizada para estructurar la Especificación de Requisitos de Software (SRS) del proyecto.</p>
+      </div>
+      <div class="standard-card">
+        <h3>PEP 8</h3>
+        <p>Guía de estilo para código Python, garantizando legibilidad y mantenibilidad del código fuente.</p>
+      </div>
+      <div class="standard-card">
+        <h3>HTML5 / CSS3 (W3C)</h3>
+        <p>Estándares web para construir una interfaz accesible, responsive y compatible con los principales navegadores.</p>
+      </div>
+      <div class="standard-card">
+        <h3>HTTPS / TLS-SSL</h3>
+        <p>Protocolo de comunicación segura entre el navegador y el servidor para proteger la información transmitida.</p>
+      </div>
+      <div class="standard-card">
+        <h3>Ley 1581 de 2012</h3>
+        <p>Legislación colombiana de protección de datos personales, aplicada especialmente al módulo de reconocimiento facial.</p>
+      </div>
+      <div class="standard-card">
+        <h3>REST</h3>
+        <p>Convenciones para el diseño de servicios web que garantizan interoperabilidad entre cliente y servidor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. METODOLOGÍA -->
+  <section class="slide" data-title="Metodología">
+    <p class="eyebrow">Metodología</p>
+    <h2 class="slide__title">Scrum: desarrollo ágil e iterativo</h2>
+    <div class="problem-grid">
+      <ul class="bean-list">
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">El <strong>Product Backlog</strong> reúne y prioriza todas las funcionalidades que debe tener COFFEE SOFT, de modo que el equipo siempre trabaje primero en lo que aporta más valor al negocio.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">El trabajo se organiza en <strong>sprints</strong> de duración corta y fija, al final de los cuales se entrega un incremento del sistema que ya funciona y se puede mostrar.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">En el <strong>Daily Scrum</strong> el equipo se reúne brevemente cada día para sincronizar avances, comentar lo que se hizo y detectar a tiempo cualquier bloqueo.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">En el <strong>Sprint Review</strong> se presenta el incremento terminado a los interesados del proyecto para validar que cumple con lo esperado antes de seguir avanzando.</span></li>
+        <li><span class="bean-icon bean-icon--sm" aria-hidden="true"></span><span class="bean-text">En la <strong>Retrospectiva</strong> el equipo analiza cómo trabajó durante el sprint y define mejoras concretas para trabajar mejor en el siguiente.</span></li>
+      </ul>
+      <div class="problem-card">
+        <span class="eyebrow">¿Por qué Scrum?</span>
+        <p>Permite adaptar el desarrollo a los requisitos del establecimiento, entregar valor de forma incremental
+        y responder rápido a los cambios, tal como lo contempla la evolución prevista del sistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. DIAGRAMA SCRUM -->
+  <section class="slide slide--diagram slide--scrum" data-title="Diagrama Scrum">
+    <p class="eyebrow">Metodología</p>
+    <h2 class="slide__title">Así trabajamos: el ciclo se repite una y otra vez</h2>
+    <div class="scrum-wheel" id="scrumWheel" tabindex="0" role="button" aria-label="Ver en grande el ciclo de trabajo: lista de pendientes, planeamos el sprint, trabajamos en equipo, entregamos un avance, mostramos el resultado, aprendemos y mejoramos, y volvemos a empezar">
+      <span class="zoom-hint"><i></i>Toca para ampliar</span>
+      <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" class="scrum-arrow"></path>
+          </marker>
+        </defs>
+        <path d="M 150 60 L 330 60" class="scrum-path" marker-end="url(#arrow)"></path>
+        <path d="M 470 60 L 620 100" class="scrum-path" marker-end="url(#arrow)"></path>
+        <path d="M 660 170 L 660 290" class="scrum-path" marker-end="url(#arrow)"></path>
+        <path d="M 610 350 L 470 400" class="scrum-path" marker-end="url(#arrow)"></path>
+        <path d="M 330 400 L 190 350" class="scrum-path" marker-end="url(#arrow)"></path>
+        <path d="M 130 300 Q 40 230 90 130" class="scrum-path scrum-path--return" marker-end="url(#arrow)"></path>
+
+        <g class="scrum-node">
+          <rect x="20" y="20" width="150" height="80" rx="10"></rect>
+          <text x="95" y="52" class="scrum-node__title">Lista de</text>
+          <text x="95" y="74" class="scrum-node__title">pendientes</text>
+        </g>
+        <g class="scrum-node">
+          <rect x="335" y="20" width="150" height="80" rx="10"></rect>
+          <text x="410" y="52" class="scrum-node__title">Planeamos</text>
+          <text x="410" y="74" class="scrum-node__title">el sprint</text>
+        </g>
+        <g class="scrum-node scrum-node--accent">
+          <rect x="590" y="90" width="150" height="80" rx="10"></rect>
+          <text x="665" y="122" class="scrum-node__title">Trabajamos</text>
+          <text x="665" y="144" class="scrum-node__title">en equipo</text>
+        </g>
+        <g class="scrum-node">
+          <rect x="590" y="290" width="150" height="80" rx="10"></rect>
+          <text x="665" y="322" class="scrum-node__title">Entregamos</text>
+          <text x="665" y="344" class="scrum-node__title">un avance</text>
+        </g>
+        <g class="scrum-node">
+          <rect x="335" y="360" width="150" height="80" rx="10"></rect>
+          <text x="410" y="392" class="scrum-node__title">Mostramos</text>
+          <text x="410" y="414" class="scrum-node__title">el resultado</text>
+        </g>
+        <g class="scrum-node">
+          <rect x="35" y="290" width="150" height="80" rx="10"></rect>
+          <text x="110" y="322" class="scrum-node__title">Aprendemos</text>
+          <text x="110" y="344" class="scrum-node__title">y mejoramos</text>
+        </g>
+      </svg>
+    </div>
+    <p class="scrum-caption">Repetimos este ciclo una y otra vez: cada vuelta entregamos algo nuevo y funcionando, y aprendemos para hacerlo mejor la próxima vez.</p>
+  </section>
+
+  <!-- 17. MANUAL DE MARCA -->
+  <section class="slide slide--diagram" data-title="Manual de marca">
+    <p class="eyebrow">Manual de marca</p>
+    <h2 class="slide__title">Identidad visual de COFFEE SOFT</h2>
+    <div class="brand-grid">
+      <figure class="brand-logo">
+        <span class="eyebrow">Logo</span>
+        <img src="img/logo-coffeesoft.png" alt="Logotipo oficial de COFFEE SOFT: un grano de café animado con moño rosa y morado" data-lightbox>
+      </figure>
+      <div class="brand-specs">
+        <div class="brand-block">
+          <span class="eyebrow">Paleta oficial · café, blanco y verde</span>
+          <div class="swatch-row">
+            <div class="swatch" style="background:#3B2417"><span>Café oscuro<br>#3B2417</span></div>
+            <div class="swatch" style="background:#B8722E"><span>Café claro<br>#B8722E</span></div>
+            <div class="swatch" style="background:#FFFFFF; color:#3B2417; border:1px solid var(--line);"><span>Blanco<br>#FFFFFF</span></div>
+            <div class="swatch" style="background:#5C7A52"><span>Verde<br>#5C7A52</span></div>
+          </div>
+        </div>
+        <div class="brand-block">
+          <span class="eyebrow">Acento del logotipo</span>
+          <div class="swatch-row">
+            <div class="swatch" style="background:#E2A0B8; color:#4B1528"><span>Rosa<br>#E2A0B8</span></div>
+          </div>
+        </div>
+        <div class="brand-block">
+          <span class="eyebrow">Tipografía</span>
+          <p class="brand-font-sample" style="font-family:'Fraunces',serif;">Fraunces — Títulos y momentos editoriales</p>
+          <p class="brand-font-sample" style="font-family:'Manrope',sans-serif;">Manrope — Texto de cuerpo, etiquetas y datos</p>
+        </div>
+        <div class="brand-block">
+          <span class="eyebrow">Uso del logotipo</span>
+          <ul class="dos-donts">
+            <li class="do">Mantener el fondo claro alrededor del personaje para conservar su legibilidad.</li>
+            <li class="do">Usar el logotipo completo en portadas y materiales impresos.</li>
+            <li class="dont">No estirar, rotar ni cambiar los colores del grano ni del moño.</li>
+            <li class="dont">No colocar el logotipo sobre fondos oscuros o con mucho ruido visual.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18. CIERRE -->
+  <section class="slide slide--cover slide--closing" data-title="Cierre">
+    <div class="cover">
+      <img class="cover__logo cover__logo--sm" src="img/logo-coffeesoft.png" alt="Logotipo de COFFEE SOFT" data-lightbox>
+      <h2 class="cover__title cover__title--sm">Gracias</h2>
+      <p class="cover__subtitle">El aroma del café, la calma de una buena gestión</p>
+      <div class="cover__meta">
+        <div class="cover__meta-item">
+          <span class="eyebrow">Presentado por</span>
+          <span class="cover__meta-value">Brigith Daniela Castellanos Martinez</span>
+        </div>
+      </div>
+    </div>
+    <div class="ring-decor ring-decor--2" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar imagen">&times;</button>
+  <div class="lightbox__stage" id="lightboxStage">
+    <img id="lightboxImg" src="" alt="">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
